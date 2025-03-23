@@ -8,19 +8,19 @@ integer i, rlinha
 r = 2.50d0
 rlinha = 0
 !
-open(10, file = '2bdiagrbifurcacao2x0711.dat')
+open(10, file = '2bdiagrbifurcacao2x07.dat')
 !
-do while (rlinha <= 1500)
+do while (rlinha <= 150)
  x = 0.7d0
  i = 0
- do while (i <= 1000)
+ do while (i <= 100)
   x = r*x*(1-x)
-  if (i >= 950) then
+  if (i >= 50) then
    write(10, *)r, x
   end if
   i = i + 1
  end do
- r = r + 0.001d0
+ r = r + 0.01d0
  rlinha = rlinha + 1
 end do 
 ! 
